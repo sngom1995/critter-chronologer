@@ -1,8 +1,10 @@
 {
 	"info": {
-		"_postman_id": "3da4eeec-6238-471f-ab55-ce0d742fa76e",
+		"_postman_id": "ffefbab9-aed5-45a3-a6b5-e39b6e2d1c08",
 		"name": "Udacity",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9242965",
+		"_collection_link": "https://lively-eclipse-163126.postman.co/workspace/INTOUCH-CORE-PROCESSING~e9cd0f7d-f0ea-41fe-8299-9634e159ac8a/collection/9242965-ffefbab9-aed5-45a3-a6b5-e39b6e2d1c08?action=share&source=collection_link&creator=9242965"
 	},
 	"item": [
 		{
@@ -12,9 +14,41 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Alex\",\r\n  \"phoneNumber\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/user/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"user",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Schedule",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
 					}
 				],
 				"body": {
@@ -48,9 +82,7 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"value": "application/json"
 					}
 				],
 				"body": {
@@ -83,9 +115,7 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"value": "application/json"
 					}
 				],
 				"body": {
@@ -119,8 +149,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
 						"value": "application/json"
 					}
 				],
@@ -159,8 +187,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
 						"value": "application/json"
 					}
 				],
@@ -196,8 +222,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
 						"value": "application/json"
 					}
 				],
@@ -236,8 +260,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
 						"value": "application/json"
 					}
 				],
@@ -276,8 +298,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
 						"value": "application/json"
 					}
 				],
@@ -316,8 +336,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
 						"value": "application/json"
 					}
 				],
@@ -356,9 +374,7 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"value": "application/json"
 					}
 				],
 				"body": {
@@ -395,9 +411,7 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"value": "application/json"
 					}
 				],
 				"body": {
@@ -434,8 +448,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
 						"value": "application/json"
 					}
 				],
@@ -474,8 +486,6 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
 						"value": "application/json"
 					}
 				],
@@ -505,6 +515,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
