@@ -10,6 +10,8 @@ import com.udacity.jdnd.course3.critter.schedule.ScheduleDTO;
 import com.udacity.jdnd.course3.critter.user.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,6 +35,7 @@ import java.util.stream.IntStream;
 @SpringBootTest(classes = CritterApplication.class)
 public class CritterFunctionalTest {
 
+    private static final Logger log = LoggerFactory.getLogger(CritterFunctionalTest.class);
     @Autowired
     private UserController userController;
 
@@ -112,10 +115,13 @@ public class CritterFunctionalTest {
 
         PetDTO petDTO = createPetDTO();
         petDTO.setOwnerId(newCustomer.getId());
-        PetDTO newPet = petController.savePet(petDTO);
 
+        PetDTO newPet = petController.savePet(petDTO);
+        System.out.println(newPet);
         CustomerDTO owner = userController.getOwnerByPet(newPet.getId());
+        System.out.println(owner);
         Assertions.assertEquals(owner.getId(), newCustomer.getId());
+
         Assertions.assertEquals(owner.getPetIds().get(0), newPet.getId());
     }
 
@@ -214,6 +220,8 @@ public class CritterFunctionalTest {
 
         //Employee 1 in is both schedule 1 and 3
         List<ScheduleDTO> scheds1e = scheduleController.getScheduleForEmployee(sched1.getEmployeeIds().get(0));
+        log.info("Found schedules for scheduler: {}", scheds1e.get(0));
+        log.info("Found schedules for employee: {}", sched1);
         compareSchedules(sched1, scheds1e.get(0));
         compareSchedules(sched3, scheds1e.get(1));
 
